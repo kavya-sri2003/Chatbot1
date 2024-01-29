@@ -5,18 +5,18 @@ class SimpleChatbot:
         self.context = {}
 
     def greet(self):
-        return "Hello! I'm your friendly chatbot. How can I assist you today?"
+        return "Hello, User! How can I assist you today?"
 
     def farewell(self):
         return "Goodbye! If you have more questions, feel free to ask anytime."
 
     def handle_basic_questions(self, question):
         responses = {
-            "How are you?": ["I'm doing well, thank you!", "I'm just a program, but I'm here to help."],
+            "Who are you?": ["I'm a chatbot.How can I help you?"],
             "What's your name?": ["I don't have a name, you can call me Chatbot.", "I'm just a virtual assistant."],
             "What can you do?": ["I can answer questions, provide information, and assist you.", "I'm here to help with anything you need."],
-            "Who created you?": ["I was created by a developer using Python.", "My creator is a human programmer."],
-            "Can you tell a joke?": ["Why don't scientists trust atoms? Because they make up everything!", "Sure, here's a joke for you."],
+            "Who created you?": ["My creator is a human programmer."],
+            "Can you generate an image?": ["Sorry! I am a text generator Bot."],
         }
 
         return random.choice(responses.get(question, ["I'm not sure how to answer that."]))
